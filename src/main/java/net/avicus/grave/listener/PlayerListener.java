@@ -2,7 +2,6 @@ package net.avicus.grave.listener;
 
 import net.avicus.grave.GravePlugin;
 import net.avicus.grave.event.*;
-import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -24,7 +23,7 @@ public class PlayerListener implements Listener {
         LivingEntity entity = event.getEntity();
         Lifetime lifetime = Lifetimes.getLifetime(entity);
         Location location = entity.getLocation();
-        Instant time = lifetime.getEnd();
+        Instant time = Instant.now();
 
         EntityDeathEvent call;
 
