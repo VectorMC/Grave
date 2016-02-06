@@ -18,13 +18,7 @@ public class PlayerListener implements Listener {
     public PlayerListener(GravePlugin grave) {
         this.grave = grave;
     }
-
-
-    @EventHandler
-    public void onEntityDeath(EntityDeathEvent event) {
-        Bukkit.getServer().broadcastMessage(event.toString());
-    }
-
+    
     @EventHandler
     public void onEntityDeath(org.bukkit.event.entity.EntityDeathEvent event) {
         LivingEntity entity = event.getEntity();
