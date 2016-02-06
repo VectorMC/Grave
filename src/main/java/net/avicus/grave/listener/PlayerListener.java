@@ -28,6 +28,7 @@ public class PlayerListener implements Listener {
 
         EntityDeathEvent call;
 
+        // EntityDeathEvent or EntityDeathBy____Event??
         if (lifetime.getLastDamage() == null || lifetime.getLastDamage().getInfo().getResolvedDamager() == null) {
             if (entity instanceof Player)
                 call = new PlayerDeathEvent((Player) entity, location, lifetime, time);
@@ -35,7 +36,6 @@ public class PlayerListener implements Listener {
                 call = new EntityDeathEvent(entity, location, lifetime, time);
         }
         else {
-
             LivingEntity cause = lifetime.getLastDamage().getInfo().getResolvedDamager();
 
             if (entity instanceof Player) {
@@ -52,6 +52,7 @@ public class PlayerListener implements Listener {
             }
         }
 
+        // Call event!
         grave.callEvent(call);
     }
 }
