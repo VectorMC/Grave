@@ -6,15 +6,18 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.HandlerList;
+import org.bukkit.inventory.ItemStack;
 import org.joda.time.Instant;
 import tc.oc.tracker.Lifetime;
+
+import java.util.List;
 
 @ToString(callSuper = true)
 public class EntityDeathByEntityEvent<T extends LivingEntity> extends EntityDeathEvent {
     private final T cause;
 
-    public EntityDeathByEntityEvent(Entity entity, Location location, Lifetime lifetime, Instant time, T cause) {
-        super(entity, location, lifetime, time);
+    public EntityDeathByEntityEvent(Entity entity, Location location, Lifetime lifetime, Instant time, List<ItemStack> drops, int droppedExp, T cause) {
+        super(entity, location, lifetime, time, drops, droppedExp);
         this.cause = cause;
     }
 
