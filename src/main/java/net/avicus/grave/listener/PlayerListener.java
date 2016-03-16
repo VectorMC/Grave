@@ -59,13 +59,14 @@ public class PlayerListener implements Listener {
             }
         }
 
+        // Call event!
+        grave.callEvent(call);
+        
+        // Apply changes in drops
         event.getDrops().clear();
         event.setDroppedExp(call.getDroppedExp());
-
         for (ItemStack itemStack : call.getDrops())
             location.getWorld().dropItemNaturally(location, itemStack);
 
-        // Call event!
-        grave.callEvent(call);
     }
 }
