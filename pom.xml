@@ -51,11 +51,11 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- PaperSpigot -->
+        <!-- Magner -->
         <dependency>
-            <groupId>com.github</groupId>
-            <artifactId>paperspigot</artifactId>
-            <version>1.8.8</version>
+            <groupId>net.avicus</groupId>
+            <artifactId>magnet-api</artifactId>
+            <version>1.8.8-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
