@@ -1,5 +1,6 @@
 package net.avicus.grave.event;
 
+import java.util.List;
 import lombok.ToString;
 import org.bukkit.Location;
 import org.bukkit.entity.LivingEntity;
@@ -9,26 +10,26 @@ import org.bukkit.inventory.ItemStack;
 import org.joda.time.Instant;
 import tc.oc.tracker.Lifetime;
 
-import java.util.List;
-
 @ToString(callSuper = true)
 public class PlayerDeathByEntityEvent<T extends LivingEntity> extends PlayerDeathEvent {
-    private final T cause;
 
-    public PlayerDeathByEntityEvent(Player player, Location location, Lifetime lifetime, Instant time, List<ItemStack> drops, int droppedExp, T cause) {
-        super(player, location, lifetime, time, drops, droppedExp);
-        this.cause = cause;
-    }
+  private final T cause;
 
-    public T getCause() {
-        return this.cause;
-    }
+  public PlayerDeathByEntityEvent(Player player, Location location, Lifetime lifetime, Instant time,
+      List<ItemStack> drops, int droppedExp, T cause) {
+    super(player, location, lifetime, time, drops, droppedExp);
+    this.cause = cause;
+  }
 
-    public static HandlerList getHandlerList() {
-        return handlers;
-    }
+  public static HandlerList getHandlerList() {
+    return handlers;
+  }
 
-    public HandlerList getHandlers() {
-        return handlers;
-    }
+  public T getCause() {
+    return this.cause;
+  }
+
+  public HandlerList getHandlers() {
+    return handlers;
+  }
 }
