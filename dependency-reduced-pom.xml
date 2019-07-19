@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.avicus</groupId>
   <artifactId>grave</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.8-SNAPSHOT</version>
   <scm>
-    <connection>scm:git://github.com/Avicus/Grave.git</connection>
-    <developerConnection>scm:git:ssh://github.com/Avicus/Grave.git</developerConnection>
-    <url>https://github.com/Avicus/Grave</url>
+    <connection>scm:git://github.com/VectorMC/Grave.git</connection>
+    <developerConnection>scm:git:ssh://github.com/VectorMC/Grave.git</developerConnection>
+    <url>https://github.com/VectorMC/Grave</url>
   </scm>
   <build>
     <sourceDirectory>${basedir}/src/main/java/</sourceDirectory>
@@ -45,8 +43,12 @@
   </build>
   <repositories>
     <repository>
-      <id>avicus-public</id>
-      <url>https://repo.avicus.net/content/groups/public/</url>
+      <id>vector-public</id>
+      <url>https://repo.vectormc.net/artifactory/public</url>
+    </repository>
+    <repository>
+      <id>vector-private</id>
+      <url>https://repo.vectormc.net/artifactory/private</url>
     </repository>
   </repositories>
   <dependencies>
@@ -87,36 +89,36 @@
           <groupId>org.yaml</groupId>
         </exclusion>
         <exclusion>
-          <artifactId>bungeecord-chat</artifactId>
-          <groupId>net.md-5</groupId>
+          <artifactId>minecraft-api</artifactId>
+          <groupId>net.avicus</groupId>
         </exclusion>
       </exclusions>
     </dependency>
     <dependency>
       <groupId>tc.oc</groupId>
       <artifactId>tracker</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.8-SNAPSHOT</version>
       <scope>provided</scope>
       <exclusions>
         <exclusion>
-          <artifactId>paperspigot</artifactId>
-          <groupId>com.github</groupId>
-        </exclusion>
-        <exclusion>
           <artifactId>guava</artifactId>
           <groupId>com.google.guava</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>minecraft-api</artifactId>
+          <groupId>net.avicus</groupId>
         </exclusion>
       </exclusions>
     </dependency>
   </dependencies>
   <distributionManagement>
     <repository>
-      <id>avicus-repo</id>
-      <url>https://repo.avicus.net/content/repositories/releases/</url>
+      <id>vector-repo</id>
+      <url>https://repo.vectormc.net/artifactory/private</url>
     </repository>
     <snapshotRepository>
-      <id>avicus-repo</id>
-      <url>https://repo.avicus.net/content/repositories/snapshots/</url>
+      <id>vector-repo</id>
+      <url>https://repo.vectormc.net/artifactory/private</url>
     </snapshotRepository>
   </distributionManagement>
   <properties>

@@ -17,28 +17,32 @@
 
   <!-- Version Control -->
   <scm>
-    <connection>scm:git://github.com/Avicus/Grave.git</connection>
-    <developerConnection>scm:git:ssh://github.com/Avicus/Grave.git</developerConnection>
-    <url>https://github.com/Avicus/Grave</url>
+    <connection>scm:git://github.com/VectorMC/Grave.git</connection>
+    <developerConnection>scm:git:ssh://github.com/VectorMC/Grave.git</developerConnection>
+    <url>https://github.com/VectorMC/Grave</url>
   </scm>
 
   <!-- Deployment -->
   <distributionManagement>
-    <repository>
-      <id>avicus-repo</id>
-      <url>https://repo.avicus.net/content/repositories/releases/</url>
-    </repository>
-    <snapshotRepository>
-      <id>avicus-repo</id>
-      <url>https://repo.avicus.net/content/repositories/snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
+        <repository>
+            <id>vector-repo</id>
+            <url>https://repo.vectormc.net/artifactory/private</url>
+        </repository>
+        <snapshotRepository>
+            <id>vector-repo</id>
+            <url>https://repo.vectormc.net/artifactory/private</url>
+        </snapshotRepository>
+    </distributionManagement>
 
   <repositories>
     <!-- PaperSpigot -->
     <repository>
-      <id>avicus-public</id>
-      <url>https://repo.avicus.net/content/groups/public/</url>
+      <id>vector-public</id>
+      <url>https://repo.vectormc.net/artifactory/public</url>
+    </repository>
+    <repository> 
+      <id>vector-private</id>
+      <url>https://repo.vectormc.net/artifactory/private</url>
     </repository>
   </repositories>
 
